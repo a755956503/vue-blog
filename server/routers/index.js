@@ -1,5 +1,6 @@
 import Router from 'koa-router';
 import User from './user';
+import Blog from './blog';
 
 const router = new Router();
 router.use(async (ctx, next) => {
@@ -14,5 +15,6 @@ router.use(async (ctx, next) => {
     };
   }
 });
-router.use(User);
+router.use('/user', User);
+router.use('/blog', Blog);
 export default router.routes();

@@ -21,6 +21,7 @@ app.use(async (ctx) => {
 (async () => {
   try {
     await app.listen(port);
+    console.log('is listening 8989');
   } catch(e) {
     
   }
