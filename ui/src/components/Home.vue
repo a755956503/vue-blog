@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="icon" @click="goUser">
+      <img src="../assets/user.png" alt="">
+    </div>
     <div class="top">
       <full-video />
       <div class="header">
@@ -21,6 +24,11 @@
 import FullVideo from '../base/FullVideo';
 import BlogList from '../base/BlogList';
 export default {
+  methods: {
+    goUser(){
+      this.$router.push('user');
+    },
+  },
   components: {
     FullVideo,
     BlogList
@@ -28,6 +36,20 @@ export default {
 }
 </script>
 <style scoped lang="less">
+.icon {
+  @size: 30px;
+  position: fixed;
+  left: 10px;
+  top: 30px;
+  width: @size;
+  height: 1@size;
+  overflow: hidden;
+  cursor: pointer;
+  img {
+    width: @size;
+    height: @size;
+  }
+}
 .top{
   position: relative;
   .header {

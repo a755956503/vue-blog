@@ -1,4 +1,6 @@
+import Cache from '../config/cache';
 const state = {
-  initData: []
+  initData: [],
+  isLogin: Cache.isLogin()
 };
 export default state;
