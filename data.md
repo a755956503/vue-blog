@@ -16,3 +16,9 @@ insert into blog (title,content) values ('橘子皮秒开指纹锁”这是真�
 
 数据
 icon颜色 #761d12
+
+api格式
+{
+  code: 0,// 0:正确,
+  result: {} // 数据
+}

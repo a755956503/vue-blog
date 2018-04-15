@@ -122,6 +122,7 @@ export default {
           overflow: hidden;
           padding: 10px;
           transition: all 1s;
+          background:  #F5FFFA;
         }
         .content_active {
           height: 300px;
@@ -130,6 +131,7 @@ export default {
         .toggle {
           height: 40px;
           position: relative;
+          background:  #F5FFFA;
           span {
             position: absolute;
             right: 10px;

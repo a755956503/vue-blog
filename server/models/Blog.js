@@ -4,6 +4,12 @@ async function getBlogs() {
   const result = await db.query(sql);
   return result;
 }
+async function addArticle(article) {
+  const sql = 'insert into blog set ?';
+  const result = await db.query(sql, article);
+  return result;
+}
 export default {
-  getBlogs
+  getBlogs,
+  addArticle
 }

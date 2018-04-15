@@ -12,4 +12,17 @@ router.get('/list', async (ctx, next) => {
   };
   next();
 });
+router.post('/article',async (ctx, next) => {
+  const article = ctx.request.body;
+  let result;
+  const body = { code: 0 };
+  if (article.title && article.content) {
+    result = await Blog.addArticle(article);
+    console.log(result);
+  } else {
+    body.code = 1;
+  }
+  ctx.body = body;
+  next();
+})
 export default router.routes();
